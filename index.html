@@ -4,8 +4,255 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DevBoard</title>
+    <!-- Favicon Link -->
+    <link rel="shortcut icon" href="assets/logo.svg" type="image/x-icon">
+    <!-- Tailwind CSS CDN Link -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- DaisyUI CDN Link -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts CDN Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- Css Style -->
+    <style>
+        :root {
+                --bg: #F4F7FF;
+                --primary-blue: #3752FD;
+                --text-color: #00303C;
+                --text-secondary: rgb(0, 48, 60, 0.8);
+                --text-light: rgb(0, 48, 60, 0.7);
+                --text-extra-light: rgb(0, 0, 0, 0.5);
+                --white: #ffffff;
+            }
+               
+        .poppins-font {
+                font-family: "Poppins", sans-serif;
+
+            }
+    </style>
 </head>
-<body>
+<body class="bg-[var(--bg)] py-6 poppins-font tracking-[.02em]">
     
+    <!-- Header Section Start -->
+    <header class="w-11/12 mx-auto">
+        <nav>
+            <!-- Navbar Logo -->
+            <div class="navbar bg-[var(--white)] rounded-box py-6">
+                <div class="flex-1">
+                  <a class="btn btn-ghost">
+                    <img class="w-12" src="assets/logo.svg" alt="">
+                    <h3 class="text-4xl"><span class="font-normal">Dev</span><span class="font-bold">Board</span></h3>
+                </a>
+                </div>
+                <div class="flex-none gap-8">
+                  <!-- Navbar Checkbox and Text -->
+                  <div class="flex items-center gap-4 bg-[var(--bg)] rounded-full px-5 py-3">
+                    <img class="w-8" src="assets/checkbox.svg" alt="">
+                    <p class="text-3xl font-bold">23</p>
+                  </div>
+
+                  <!-- Navbar Theme BTN -->
+                  <div>
+                    <div tabindex="0" role="button" class="w-16 h-16 mr-5 btn btn-ghost btn-circle bg-[var(--bg)]">
+                      <div id="btn-color-change" class="rounded-full">
+                        <img src="assets/theme-btn.svg" alt="">
+                      </div>
+                    </div>                    
+                  </div>
+                  
+                </div>
+              </div>
+        </nav>
+    </header>
+
+    <!-- Main Section Start -->
+    <main>
+
+        <!-- Task Assigned Section -->
+        <section class="w-11/12 mx-auto my-6  ">
+            <div class="grid grid-cols-4 gap-5">
+                <!-- Task Assigned Side -->
+                <div class="col-span-3 rounded-box p-5 bg-[var(--white)]">
+                    <!-- Task Heading -->
+                    <div class="flex gap-5">
+                        <div class="flex justify-center items-center gap-5 bg-[var(--bg)] p-6 rounded-box">
+                            <div class="bg-[var(--white)] p-5 rounded-full">
+                                <img class="w-8" src="assets/checkbox.svg" alt="">
+                            </div>
+                            <div>
+                                <p class="text-[16px] font-medium text-[var(--text-secondary)]">Task Assigned</p>
+                                <p class="text-4xl font-bold text-[var(--text-color)]">05</p>
+                            </div>
+                        </div>
+
+                        <div class="flex justify-center items-center gap-5 py-5 pr-10 flex-1 rounded-box bg-gradient-to-r from-[var(--primary-blue)] to-[#9BA8F8] cursor-pointer ">
+                            <div><img src="assets/board.svg" alt=""></div>
+                            <div><h4 class="text-2xl font-medium text-[var(--white)]">Discover Something <br> New Today!</h4></div>
+                        </div>
+
+                        <div class="flex justify-center items-center gap-5 bg-[var(--bg)] p-5 rounded-box">
+                            <div class="bg-[var(--white)] p-5 rounded-full">
+                                <img class="w-8" src="assets/calender.svg" alt="">
+                            </div>
+                            <div>
+                                <p class="text-2xl font-medium text-[var(--text-color)]">Wed,</p>
+                                <p class="text-2xl font-bold text-[var(--text-color)]">Jul 28 2025</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <!-- Task Card -->
+                    <div class="bg-[var(--white)] mt-5 border-t-2 border-dashed pt-5">
+                       
+                        <!-- All Cards -->
+                        <div class="grid grid-cols-3 gap-4">
+                            <!-- Card Number - 1 -->
+                        <div class="card bg-[var(--bg)]">
+                            <div class="card-body">
+                                <div>
+                                    <button class="btn bg-[var(--white)] text-[16px] text-[var(--text-color)] font-normal">ShopEase</button>
+                                </div>
+                              <h2 class="card-title text-2xl text-[var(--text-color)] font-medium my-4">Fix Mobile Button Issue</h2>
+                              <div class="bg-[var(--white)] p-4 rounded-lg">
+                                <p class="text-[16px] text-[var(--text-extra-light)]">Debug using Chrome DevTools, check for overlapping...</p>
+                              </div>
+                              <div class="card-actions justify-between border-t-2 border-dashed mt-4 pt-5">
+                                <div>
+                                    <p class="text-[var(--text-light)] text-[14px]">Deadline</p>
+                                    <p class="text-[16px] font-medium text-[var(--text-color)]">21 March 2025</p>
+                                </div>
+                                <div>
+                                    <button class="btn bg-[var(--primary-blue)] text-[var(--white)]">Completed</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        <!-- Card Number - 2 -->
+                        <div class="card bg-[var(--bg)]">
+                            <div class="card-body">
+                                <div>
+                                    <button class="btn bg-[var(--white)] text-[16px] text-[var(--text-color)] font-normal">CloudSync</button>
+                                </div>
+                              <h2 class="card-title text-2xl text-[var(--text-color)] font-medium my-4">Add Dark Mode</h2>
+                              <div class="bg-[var(--white)] p-4 rounded-lg">
+                                <p class="text-[16px] text-[var(--text-extra-light)]">Store the user's preference in localStorage, update CSS vari...</p>
+                              </div>
+                              <div class="card-actions justify-between border-t-2 border-dashed mt-4 pt-5">
+                                <div>
+                                    <p class="text-[var(--text-light)] text-[14px]">Deadline</p>
+                                    <p class="text-[16px] font-medium text-[var(--text-color)]">21 March 2025</p>
+                                </div>
+                                <div>
+                                    <button class="btn bg-[var(--primary-blue)] text-[var(--white)]">Completed</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        <!-- Card Number - 3 -->
+                        <div class="card bg-[var(--bg)]">
+                            <div class="card-body">
+                                <div>
+                                    <button class="btn bg-[var(--white)] text-[16px] text-[var(--text-color)] font-normal">SwiftPay</button>
+                                </div>
+                              <h2 class="card-title text-2xl text-[var(--text-color)] font-medium my-4">Optimize Home Page</h2>
+                              <div class="bg-[var(--white)] p-4 rounded-lg">
+                                <p class="text-[16px] text-[var(--text-extra-light)]">Debug using Chrome DevTools, check for overlapping...</p>
+                              </div>
+                              <div class="card-actions justify-between border-t-2 border-dashed mt-4 pt-5">
+                                <div>
+                                    <p class="text-[var(--text-light)] text-[14px]">Deadline</p>
+                                    <p class="text-[16px] font-medium text-[var(--text-color)]">21 March 2025</p>
+                                </div>
+                                <div>
+                                    <button class="btn bg-[var(--primary-blue)] text-[var(--white)]">Completed</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        <!-- Card Number - 4 -->
+                        <div class="card bg-[var(--bg)]">
+                            <div class="card-body">
+                                <div>
+                                    <button class="btn bg-[var(--white)] text-[16px] text-[var(--text-color)] font-normal">Meta</button>
+                                </div>
+                              <h2 class="card-title text-2xl text-[var(--text-color)] font-medium my-4">Add new emoji 🤲</h2>
+                              <div class="bg-[var(--white)] p-4 rounded-lg">
+                                <p class="text-[16px] text-[var(--text-extra-light)]">Debug using Chrome DevTools, check for overlapping...</p>
+                              </div>
+                              <div class="card-actions justify-between border-t-2 border-dashed mt-4 pt-5">
+                                <div>
+                                    <p class="text-[var(--text-light)] text-[14px]">Deadline</p>
+                                    <p class="text-[16px] font-medium text-[var(--text-color)]">21 March 2025</p>
+                                </div>
+                                <div>
+                                    <button class="btn bg-[var(--primary-blue)] text-[var(--white)]">Completed</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        <!-- Card Number - 5 -->
+                        <div class="card bg-[var(--bg)]">
+                            <div class="card-body">
+                                <div>
+                                    <button class="btn bg-[var(--white)] text-[16px] text-[var(--text-color)] font-normal">Google LLC</button>
+                                </div>
+                              <h2 class="card-title text-2xl text-[var(--text-color)] font-medium my-4">Integrate OpenAI API</h2>
+                              <div class="bg-[var(--white)] p-4 rounded-lg">
+                                <p class="text-[16px] text-[var(--text-extra-light)]">Debug using Chrome DevTools, check for overlapping...</p>
+                              </div>
+                              <div class="card-actions justify-between border-t-2 border-dashed mt-4 pt-5">
+                                <div>
+                                    <p class="text-[var(--text-light)] text-[14px]">Deadline</p>
+                                    <p class="text-[16px] font-medium text-[var(--text-color)]">21 March 2025</p>
+                                </div>
+                                <div>
+                                    <button class="btn bg-[var(--primary-blue)] text-[var(--white)]">Completed</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        <!-- Card Number - 6 -->
+                        <div class="card bg-[var(--bg)]">
+                            <div class="card-body">
+                                <div>
+                                    <button class="btn bg-[var(--white)] text-[16px] text-[var(--text-color)] font-normal">Glassdoar</button>
+                                </div>
+                              <h2 class="card-title text-2xl text-[var(--text-color)] font-medium my-4">Improve Job Searching</h2>
+                              <div class="bg-[var(--white)] p-4 rounded-lg">
+                                <p class="text-[16px] text-[var(--text-extra-light)]">Debug using Chrome DevTools, check for overlapping...</p>
+                              </div>
+                              <div class="card-actions justify-between border-t-2 border-dashed mt-4 pt-5">
+                                <div>
+                                    <p class="text-[var(--text-light)] text-[14px]">Deadline</p>
+                                    <p class="text-[16px] font-medium text-[var(--text-color)]">21 March 2025</p>
+                                </div>
+                                <div>
+                                    <button class="btn bg-[var(--primary-blue)] text-[var(--white)]">Completed</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- History Side -->
+                <div class="col-span-1 rounded-box p-5 bg-[var(--white)]">
+                    <div class="text-center">
+                        <div class="flex justify-center gap-4 mb-5">
+                            <img src="assets/activity.svg" alt="">
+                            <h5 class="text-[20px] font-medium">Activity Log</h5>
+                        </div>
+                        <button class="btn bg-[var(--primary-blue)] text-[var(--white)] text-[16px] font-medium">Clear History</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="btn-color-change.js"></script>
 </body>
 </html>
