@@ -1,5 +1,9 @@
 document.getElementById('btn-color-change').addEventListener('click', function(){
-    const colors = ['orange', 'orange', 'violet']
+    
+        let bgColors = ["violet", "tomato", "purple", "orange", "pink"];
+        
+        let randomColor = bgColors[Math.floor(Math.random() * bgColors.length)];        
+        document.body.style.backgroundColor = randomColor;    
 
     
 })
