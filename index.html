@@ -31,6 +31,7 @@
                 font-family: "Poppins", sans-serif;
 
             }
+            
     </style>
 </head>
 <body class="bg-[var(--bg)] py-6 poppins-font tracking-[.02em]">
@@ -50,7 +51,7 @@
                   <!-- Navbar Checkbox and Text -->
                   <div class="flex items-center gap-4 bg-[var(--bg)] rounded-full px-5 py-3">
                     <img class="w-8" src="assets/checkbox.svg" alt="">
-                    <p class="text-3xl font-bold">23</p>
+                    <p id="navbar-count" class="text-3xl font-bold">23</p>
                   </div>
 
                   <!-- Navbar Theme BTN -->
@@ -83,7 +84,7 @@
                             </div>
                             <div>
                                 <p class="text-[16px] font-medium text-[var(--text-secondary)]">Task Assigned</p>
-                                <p class="text-4xl font-bold text-[var(--text-color)]">05</p>
+                                <p id="task-list" class="text-4xl font-bold text-[var(--text-color)]">6</p>
                             </div>
                         </div>
 
@@ -96,9 +97,8 @@
                             <div class="bg-[var(--white)] p-5 rounded-full">
                                 <img class="w-8" src="assets/calender.svg" alt="">
                             </div>
-                            <div>
-                                <p class="text-2xl font-medium text-[var(--text-color)]">Wed,</p>
-                                <p class="text-2xl font-bold text-[var(--text-color)]">Jul 28 2025</p>
+                            <div>                                
+                                <p id="current-date" class="text-2xl font-bold text-[var(--text-color)]"></p>
                             </div>
                         </div>
                         
@@ -124,7 +124,7 @@
                                     <p class="text-[16px] font-medium text-[var(--text-color)]">21 March 2025</p>
                                 </div>
                                 <div>
-                                    <button class="btn bg-[var(--primary-blue)] text-[var(--white)]">Completed</button>
+                                    <button class="btn bg-[var(--primary-blue)] text-[var(--white)] hover:bg-[var(--text-color)] btn-completed">Completed</button>
                                 </div>
                               </div>
                             </div>
@@ -145,7 +145,7 @@
                                     <p class="text-[16px] font-medium text-[var(--text-color)]">21 March 2025</p>
                                 </div>
                                 <div>
-                                    <button class="btn bg-[var(--primary-blue)] text-[var(--white)]">Completed</button>
+                                    <button class="btn bg-[var(--primary-blue)] text-[var(--white)] hover:bg-[var(--text-color)] btn-completed">Completed</button>
                                 </div>
                               </div>
                             </div>
@@ -166,7 +166,7 @@
                                     <p class="text-[16px] font-medium text-[var(--text-color)]">21 March 2025</p>
                                 </div>
                                 <div>
-                                    <button class="btn bg-[var(--primary-blue)] text-[var(--white)]">Completed</button>
+                                    <button class="btn bg-[var(--primary-blue)] text-[var(--white)] hover:bg-[var(--text-color)] btn-completed">Completed</button>
                                 </div>
                               </div>
                             </div>
@@ -187,7 +187,7 @@
                                     <p class="text-[16px] font-medium text-[var(--text-color)]">21 March 2025</p>
                                 </div>
                                 <div>
-                                    <button class="btn bg-[var(--primary-blue)] text-[var(--white)]">Completed</button>
+                                    <button class="btn bg-[var(--primary-blue)] text-[var(--white)] hover:bg-[var(--text-color)] btn-completed">Completed</button>
                                 </div>
                               </div>
                             </div>
@@ -208,7 +208,7 @@
                                     <p class="text-[16px] font-medium text-[var(--text-color)]">21 March 2025</p>
                                 </div>
                                 <div>
-                                    <button class="btn bg-[var(--primary-blue)] text-[var(--white)]">Completed</button>
+                                    <button class="btn bg-[var(--primary-blue)] text-[var(--white)] hover:bg-[var(--text-color)] btn-completed">Completed</button>
                                 </div>
                               </div>
                             </div>
@@ -219,19 +219,19 @@
                                 <div>
                                     <button class="btn bg-[var(--white)] text-[16px] text-[var(--text-color)] font-normal">Glassdoar</button>
                                 </div>
-                              <h2 class="card-title text-2xl text-[var(--text-color)] font-medium my-4">Improve Job Searching</h2>
-                              <div class="bg-[var(--white)] p-4 rounded-lg">
+                                <h2 class="card-title text-2xl text-[var(--text-color)] font-medium my-4">Improve Job Searching</h2>
+                                <div class="bg-[var(--white)] p-4 rounded-lg">
                                 <p class="text-[16px] text-[var(--text-extra-light)]">Debug using Chrome DevTools, check for overlapping...</p>
-                              </div>
-                              <div class="card-actions justify-between border-t-2 border-dashed mt-4 pt-5">
-                                <div>
-                                    <p class="text-[var(--text-light)] text-[14px]">Deadline</p>
-                                    <p class="text-[16px] font-medium text-[var(--text-color)]">21 March 2025</p>
                                 </div>
-                                <div>
-                                    <button class="btn bg-[var(--primary-blue)] text-[var(--white)]">Completed</button>
+                                <div class="card-actions justify-between border-t-2 border-dashed mt-4 pt-5">
+                                    <div>
+                                        <p class="text-[var(--text-light)] text-[14px]">Deadline</p>
+                                        <p class="text-[16px] font-medium text-[var(--text-color)]">21 March 2025</p>
+                                    </div>
+                                    <div>
+                                        <button class="btn bg-[var(--primary-blue)] text-[var(--white)] hover:bg-[var(--text-color)] btn-completed">Completed</button>
+                                    </div>
                                 </div>
-                              </div>
                             </div>
                           </div>
                         </div>
@@ -241,18 +241,22 @@
 
                 <!-- History Side -->
                 <div class="col-span-1 rounded-box p-5 bg-[var(--white)]">
-                    <div class="text-center">
+                    <div class="text-center pb-5 border-b-2 border-dashed">
                         <div class="flex justify-center gap-4 mb-5">
                             <img src="assets/activity.svg" alt="">
                             <h5 class="text-[20px] font-medium">Activity Log</h5>
                         </div>
-                        <button class="btn bg-[var(--primary-blue)] text-[var(--white)] text-[16px] font-medium">Clear History</button>
+                        <button id="history-clear" class="btn bg-[var(--primary-blue)] text-[var(--white)] text-[16px] font-medium">Clear History</button>
                     </div>
+                    <div id="history-activity"></div>
                 </div>
             </div>
         </section>
     </main>
 
     <script src="btn-color-change.js"></script>
+    <script src="btn-complete.js"></script>
+    <script src="current-date.js"></script>
+    <script src="clear-history.js"></script>
 </body>
 </html>
