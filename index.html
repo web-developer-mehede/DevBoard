@@ -90,7 +90,7 @@
 
                         <div class="flex justify-center items-center gap-5 py-5 pr-10 flex-1 rounded-box bg-gradient-to-r from-[var(--primary-blue)] to-[#9BA8F8] cursor-pointer ">
                             <div><img src="assets/board.svg" alt=""></div>
-                            <div><h4 class="text-2xl font-medium text-[var(--white)]">Discover Something <br> New Today!</h4></div>
+                            <div id="blog-page"><h4 class="text-2xl font-medium text-[var(--white)]">Discover Something <br> New Today!</h4></div>
                         </div>
 
                         <div class="flex justify-center items-center gap-5 bg-[var(--bg)] p-5 rounded-box">
@@ -258,5 +258,10 @@
     <script src="btn-complete.js"></script>
     <script src="current-date.js"></script>
     <script src="clear-history.js"></script>
+    <script>
+      document.getElementById('blog-page').addEventListener('click', function(){
+        window.location.href = 'blog.html'
+      })
+    </script>
 </body>
 </html>
